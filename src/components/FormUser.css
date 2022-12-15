@@ -1,0 +1,12 @@
+/* 
+.card{
+    background-color: rgb(211, 210, 220);
+    z-index: 0;
+} */
+/* 
+#tarjeta{
+    background-color: aqua;
+} */
+.formcontrol{
+    backdrop-filter: blur(10px);
+}

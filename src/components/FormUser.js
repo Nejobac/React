@@ -9,7 +9,7 @@ const initialUsuario = {
   correo: "",
   password: ""
 }
-const FormUserComponent = ({ userAdd, usuarioEditado, setUsuarioEditado,userEdit }) => {
+const FormUserComponent = ({ userAdd, usuarioEditado, setUsuarioEditado, userEdit }) => {
   const [state, setState] = useState(initialUsuario);
   const { nombre, apellido, correo, password } = state;
   //el hook useEffect siempre está pendiende de si la variable que viene dentro
@@ -58,7 +58,7 @@ const FormUserComponent = ({ userAdd, usuarioEditado, setUsuarioEditado,userEdit
         </div>
         <div class=" card-body" style={{ zIndex: 0, opacity: "80%" }}>
           <form class="border">
-          {usuarioEditado!==null? <h1>Editar usuario</h1>:<h1>Ingrese usuario</h1> }
+            {usuarioEditado !== null ? <h1>Editar usuario</h1> : <h1>Ingrese usuario</h1>}
             <div class="mb-3" id="Nombre">
               <label for="Nombre" class="form-label">
                 Nombre
@@ -115,33 +115,33 @@ const FormUserComponent = ({ userAdd, usuarioEditado, setUsuarioEditado,userEdit
             </div>
             {/*             <Button infoBoton={'Enviar formulario'}/>
  */}            {usuarioEditado !== null ? (
-          <button
-          type="button"
-          class="btn btn-success"
-          onClick={() => userEdit(state)}
-        >
-          Editar usuario
-        </button>
-      ) : (
-        <button
-          type="button"
-          class="btn btn-success"
-          onClick={() => userAdd(state)}
-        >
-          Ingresar usuario
-        </button>
-      )}
-      {usuarioEditado !== null ? (
-          <button
-            type="button"
-            class="btn btn-danger"
-            onClick={() => setUsuarioEditado(null)}
-          >
-            Cancelar
-          </button>
-        ) : (
-          <></>
-        )}
+              <button
+                type="button"
+                class="btn btn-success"
+                onClick={() => userEdit(state)}
+              >
+                Editar usuario
+              </button>
+            ) : (
+              <button
+                type="button"
+                class="btn btn-success"
+                onClick={() => userAdd(state)}
+              >
+                Ingresar usuario
+              </button>
+            )}
+            {usuarioEditado !== null ? (
+              <button
+                type="button"
+                class="btn btn-danger"
+                onClick={() => setUsuarioEditado(null)}
+              >
+                Cancelar
+              </button>
+            ) : (
+              <></>
+            )}
           </form>
         </div>
       </div>

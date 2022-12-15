@@ -74,7 +74,7 @@ const TeamNejo = () => {
       </div>
       <div class="row">
         <div class="col">
-      <br/>
+          <br />
           <div class="card h-100">
             <img
               src={Azumarill}
@@ -91,7 +91,7 @@ const TeamNejo = () => {
             </div>
             <div class="card-footer">
               <small class="text-muted">N.° 184</small>
-{/*               
+              {/*               
               <a class="dropdown-item"
                             href="#"
                             onClick={() => {
@@ -105,7 +105,7 @@ const TeamNejo = () => {
         </div>
 
         <div class="col">
-      <br/>
+          <br />
           <div class="card h-100">
             <img
               src={Toxicroak}
@@ -127,7 +127,7 @@ const TeamNejo = () => {
         </div>
 
         <div class="col">
-      <br/>
+          <br />
           <div class="card h-100">
             <img
               src={Flygon}

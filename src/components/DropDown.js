@@ -1,6 +1,6 @@
 import React from "react";
 
-const DropDown = ({datos, deleteData,setUsuarioEditado}) => {
+const DropDown = ({ datos, deleteData, setUsuarioEditado }) => {
   return (
     <div class="btn-group">
       <button
@@ -22,8 +22,6 @@ const DropDown = ({datos, deleteData,setUsuarioEditado}) => {
             onClick={() => {/* 
             verificar si es un auto o un usuario, si es un auto eliminar los datos del auto y sino del usuario.- */
               setUsuarioEditado(datos);
-
-              
             }}>
             Actualizar
           </a>
@@ -33,7 +31,6 @@ const DropDown = ({datos, deleteData,setUsuarioEditado}) => {
             onClick={() => {/* 
             verificar si es un auto o un usuario, si es un auto eliminar los datos del auto y sino del usuario.- */
               deleteData(datos.correo);
-              
             }}
           >
             Eliminar

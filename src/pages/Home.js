@@ -19,8 +19,6 @@ const usuario=[
 /*Forma específica de escribir el state de acuerdo al contexto*/
 /* const [objeto, setObjeto] = useState(initialObjeto);
  *//* useState() realiza la copia(virutualización) del valor entregado */
-
-
 const HomePage = () => {
     const navigate = useNavigate();
     const handleOnClickAuto =useCallback(()=>navigate("/auto",{},[navigate]))
@@ -31,7 +29,6 @@ const HomePage = () => {
     const [state,setState] = useState(usuario)
 
     const[usuarioEditado,setUsuarioEditado]=useState(null);
-
     const userDelete=(correoUsuario)=>{
       /* esta funcion fuktra mi lista de usuarios */
       const changeUser=state.filter(usuario=>usuario.correo != correoUsuario);
@@ -40,7 +37,7 @@ const HomePage = () => {
 yo le voy a cambiar el valor temporal a mis usuarios*/   
 /*   setState(changeUser) */
     }
-//******************************************************************************************* */
+//******************FUNCION QUE NOS SIRVE PARA AGREGAR UN NUEVO USUARIO *********** */
     const userAdd=(usuario)=>{
       const addUsuario=[
         //mantenme los datos que tengo en user y agregame lo que yo te entrego aqui(usuario)
@@ -48,7 +45,7 @@ yo le voy a cambiar el valor temporal a mis usuarios*/
       ]
       setState(addUsuario)
     }
-    //******************************************************************************************** */
+    //************FUNCION PARA EDITAR ACORDE A SI ESTÁ MODIFICADO EL CORREO*********** */
     const userEdit=(usuarioEditado)=>{
       const editState = state.map(usuario=>(usuario.correo===usuarioEditado.correo ?
         usuarioEditado: usuario))
@@ -72,6 +69,7 @@ yo le voy a cambiar el valor temporal a mis usuarios*/
           handleOnClick={handleOnClickPoke}/>
         </div>
         <div class="col">
+          {/* se le envian los props que creamos a la tabla de usuario */}
           <TableUser usuarios={state} deleteUser={userDelete} setUsuarioEditado={setUsuarioEditado}/> <br />
         </div>
       </div>

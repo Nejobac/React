@@ -48,8 +48,8 @@ const FormCarComponent = () => {
                 Año
               </label>
               <input type="number" class="form-control" id="año" />
-            </div>            
-            <Button infoBoton={'Enviar formulario'}/>
+            </div>
+            <Button infoBoton={'Enviar formulario'} />
           </form>
         </div>
       </div>

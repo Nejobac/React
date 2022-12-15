@@ -1,6 +1,6 @@
 import React from "react";
 import DropDown from "./DropDown";
-
+//se reciben los props enviados desde home para ser usados más adelante
 const TableUser = ({ usuarios, deleteUser, setUsuarioEditado }) => {
   return (
     <div class="container">
@@ -22,8 +22,7 @@ const TableUser = ({ usuarios, deleteUser, setUsuarioEditado }) => {
             <tbody>
               {/*//Iteramos usuarios con .map, a cada elemento de usuarios lo 
               llamaremos usuario y realizaremos lo siguiente =>*/}
-
-              {usuarios.map(usuario => (  
+              {usuarios.map(usuario => (
                 <tr>
                   <td>{usuario.nombre}</td>
                   <td>{usuario.apellido}</td>
@@ -31,8 +30,8 @@ const TableUser = ({ usuarios, deleteUser, setUsuarioEditado }) => {
                   <td type="password">{usuario.password}</td>
                   <td>
                     <DropDown datos={usuario}
-                              setUsuarioEditado={setUsuarioEditado}
-                              deleteData={deleteUser}/>
+                      setUsuarioEditado={setUsuarioEditado}
+                      deleteData={deleteUser} />
                   </td>
                 </tr>
               ))}
